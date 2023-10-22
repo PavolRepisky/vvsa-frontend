@@ -1,0 +1,4 @@
+<div *ngFor="let item of transactionList">
+  {{ item | json }}
+  <a [routerLink]="['detail', item.transactionId]">Detail</a>
+</div>
