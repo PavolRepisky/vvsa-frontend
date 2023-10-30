@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
 import { UtilsModule } from '../utils/utils.module';
 import { BasicAccountsDetailComponent } from './basic-accounts-detail/basic-accounts-detail.component';
 import { BasicDetailComponent } from './basic-accounts-detail/basic-detail/basic-detail.component';
@@ -15,6 +17,12 @@ import { BasicAccountsRoutingModule } from './basic-accounts-routing.module';
     BasicDetailComponent,
     WithdrawalDetailComponent,
   ],
-  imports: [CommonModule, BasicAccountsRoutingModule, UtilsModule],
+  imports: [
+    CommonModule,
+    BasicAccountsRoutingModule,
+    UtilsModule,
+    MatTableModule,
+    MatIconModule,
+  ],
 })
 export class BasicAccountsModule {}
