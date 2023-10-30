@@ -11,6 +11,7 @@ import {
 })
 export class BasicAccountsListComponent {
   transactionList: ITransaction[] = [];
+  displayedColumns: string[] = ['name', 'type', 'account', 'amount', 'action'];
 
   constructor(private transactionsService: TransactionsServiceService) {
     this.transactionsService.getTransactions$().subscribe((response) => {
